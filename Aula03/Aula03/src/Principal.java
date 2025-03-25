@@ -20,8 +20,18 @@ public class Principal {
 
         //Ler os dados do fornecedor
 
+        System.out.println("Digite o nome do Fornecedor:");
+        String empresa = leitor.next() + leitor.nextLine();
+
+        System.out.println("Digite o Telefone do Fornecedor:");
+        String telefone = leitor.next();
+
+        System.out.println("Digite o cnpj do Fornecedor:");
+        String cnpj = leitor.next();
+
         //criar objeto
         Produtos produto = new Produtos();
+        Fornecedor fornecedor = new Fornecedor();
 
             // COlocar os dados no objetos
             produto.codigo = codigo;
@@ -29,10 +39,18 @@ public class Principal {
             produto.preco = preco;
             produto.disponivel = disponivel;
 
+            fornecedor.nome = empresa;
+            fornecedor.telefone = telefone;
+            fornecedor.cnpj = cnpj;
+
         System.out.println("Código: " + produto.codigo);
         System.out.println("Nome: " + produto.nome);
         System.out.println("Preço: R$ " + produto.preco);
         System.out.println("Disponível: " + (produto.disponivel ? "Sim" : "Não"));
+
+        System.out.println("Empresa: " + fornecedor.nome);
+        System.out.println("Telefone: " + fornecedor.telefone);
+        System.out.println("CNPJ: " + fornecedor.cnpj);
     }
 
 }

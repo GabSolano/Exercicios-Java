@@ -4,5 +4,5 @@ public class Produtos {
     int codigo;
     float preco;
     boolean disponivel;
-    Fornecedor fornecedor
+    Fornecedor fornecedor;
 }
